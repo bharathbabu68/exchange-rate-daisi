@@ -1,5 +1,5 @@
 # Forex App
-A very minimalistic application that lets you get the exchange rate between a pair of currencies and also convert a given amount from one currency to another along with a Streamlit UI
+A very minimalistic application that lets you get the exchange rate between a pair of currencies and also convert a given amount from one currency to another along with a Streamlit UI. The app also enables you to do this with historic rates. 
 
 ## Installation
 ```bash
