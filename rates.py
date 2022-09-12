@@ -29,5 +29,9 @@ def convert_currencies(from_curr, to_curr, amount):
     - float : Converted Value
     '''
     c = CurrencyRates()
-    converted_value = c.convert(from_curr, to_curr, amount)
+    exchange_rate = get_live_exchange_rate(from_curr, to_curr)
+    converted_value = exchange_rate * amount
     return converted_value
+
+res = convert_currencies("USD", "EUR", 200)
+print(res)
