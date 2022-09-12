@@ -30,5 +30,5 @@ def convert_currencies(from_curr, to_curr, amount):
     '''
     c = CurrencyRates()
     exchange_rate = get_live_exchange_rate(from_curr, to_curr)
-    converted_value = exchange_rate * amount
+    converted_value = exchange_rate * float(amount)
     return converted_value
