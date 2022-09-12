@@ -35,7 +35,7 @@ def convert_currencies(from_curr, to_curr, amount):
     return converted_value
 
 def currency_codes():
-    codes = []
+    codes = ["USD"]
     c = CurrencyRates()
     rates = c.get_rates('USD')
     for code in rates:
@@ -53,10 +53,10 @@ def st_ui():
         st.subheader("Live Exchange Rates")
         curr1 = st.selectbox(
         'Select currency 1',
-        codes, key="1")
+        codes, index=0, key="1")
         curr2 = st.selectbox(
         'Select currency 2',
-        codes, key="2")
+        codes, index=22, key="2")
         if curr1 == curr2:
             st.text("")
             st.warning('Both currency 1 and currency 2 are same, please change your option', icon="⚠️")
@@ -71,10 +71,10 @@ def st_ui():
         st.subheader("Convert Currencies")
         curr1 = st.selectbox(
         'Select currency 1',
-        codes, key="3")
+        codes, index=0, key="3")
         curr2 = st.selectbox(
         'Select currency 2',
-        codes, key="4")
+        codes, index=22, key="4")
         amount = st.number_input("Enter amount to convert", min_value=1)
         if curr1 == curr2:
             st.text("")
