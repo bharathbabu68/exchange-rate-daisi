@@ -25,4 +25,4 @@ live_forex_rates.convert_currencies(from_curr, to_curr, amount).value
 ```
 
 ## Running
-This app can be tested straight through the Daisi platform from the App section at (https://app.daisi.io/daisies/bharathbabu3017/Live%20Forex%20Rates/info)
+This app can be tested straight through the Daisi platform [Click here](https://app.daisi.io/daisies/bharathbabu3017/Live%20Forex%20Rates/streamlit)
