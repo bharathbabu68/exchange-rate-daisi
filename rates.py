@@ -103,6 +103,7 @@ def st_ui():
         codes, index=22, key="6")
         amount = st.number_input("Enter amount to convert", min_value=1, key="8")
         dateval = st.date_input("Enter date", value=None, min_value=None, max_value=datetime.now(), key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False)
+        dt_string = dateval.strftime("%d/%m/%Y")
         if curr1 == curr2:
             st.text("")
             st.warning('Both currency 1 and currency 2 are same, please change your option', icon="⚠️")
@@ -112,7 +113,7 @@ def st_ui():
                 with st.spinner('Converting...'):
                     res = convert_currencies(curr1, curr2, amount, dateval)
                 st.text("")
-                st.text(str(amount) + " " + curr1 + " is equal to " + str(res) + " " + curr2)
+                st.text(str(amount) + " " + curr1 + " is equal to " + str(res) + " " + curr2 + " as on " + dt_string)
 
 
 if __name__ == '__main__':
